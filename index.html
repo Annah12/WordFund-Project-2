@@ -6,6 +6,7 @@
         <meta name="viewport" content="width-device-width,initial-scale=1.0">
         <title>Word Family Fund</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/9f306f502b.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="header">
@@ -161,6 +162,25 @@
                 <a href="https://www.instagram.com/word family fund/?hl=en"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
+         <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbz6C8oM9XufGrVkf1M3B2u0L31cGmdIg_CKCXioJOM0gjc2BnhAuc4oZb4eqlYL06DWTA/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+        
+        
+            form.addEventListener('submit',e => {
+                e.preventDefault()
+                fetch(scriptURL, { method:'POST',body: new FormData(form)})
+                .then(response => {
+                     msg.innerHTML = "Message sent successfully"
+                     setTimeout(function(){
+                        msg.innerHTML = ""
+                     },5000)
+                     form.reset()
+                    })
+                .catch(error => console.error('Error!',error.message))
+            })
+        </script>
 
 </body>
 </html>
