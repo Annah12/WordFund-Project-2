@@ -1,2 +1,2 @@
 # WordFund-Project-2
-Venture Studio Website Team Peoject
+Venture Studio Website Team Project
