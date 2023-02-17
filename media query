@@ -1,0 +1,14 @@
+
+@media (max-width:768px) {
+    .header-text{
+    text-align: center;
+    }
+    .hearder-text h1, .header-text h6{
+        text-align: left;
+    }
+    .link{
+        margin: 1rem 2rem;
+        text-align: left;
+    }
+  
+}
