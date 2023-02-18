@@ -60,6 +60,7 @@ nav div a{
     margin-top: 20px;
     cursor: pointer;
     border-radius: 50px;
+    color: white;
 }
 nav ul li a::after{
     content: '';
